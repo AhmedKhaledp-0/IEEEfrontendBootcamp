@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Guess the Number Game</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Guess the Number</h1>
+    </header>
+
+    <main>
+      <section id="game-rules">
+        <h2>Game Rules</h2>
+        <p>I'm thinking of a number between 1 and 100. Can you guess it?</p>
+        <p>Try to guess the number in as few attempts as possible!</p>
+      </section>
+
+      <section id="game-area">
+        <div id="guess-input">
+          <input
+            type="number"
+            id="user-guess"
+            min="1"
+            max="100"
+            placeholder="Enter your guess..."
+          />
+          <button id="submit-guess">Submit Guess</button>
+        </div>
+
+        <div id="game-message">
+          <p>Enter a number and click "Submit Guess"</p>
+        </div>
+
+        <div id="game-history">
+          <h3>Your Guesses</h3>
+          <ul id="guesses-list">
+            <!-- Guesses will appear here -->
+          </ul>
+        </div>
+      </section>
+
+      <section id="game-stats">
+        <div id="score">
+          <h3>Score</h3>
+          <p>Attempts: <span id="attempts">0</span></p>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>Created during the "Create Your First Website" Bootcamp</p>
+    </footer>
+
+    <!-- Add JavaScript at the end for better performance -->
+    <script src="script.js"></script>
+  </body>
+</html>

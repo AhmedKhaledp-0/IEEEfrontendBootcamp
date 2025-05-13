@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Advanced Guess the Number Game</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="advanced-styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Guess the Number</h1>
+      <div class="difficulty-selector">
+        <button class="difficulty-btn" data-difficulty="easy">Easy</button>
+        <button class="difficulty-btn active" data-difficulty="medium">
+          Medium
+        </button>
+        <button class="difficulty-btn" data-difficulty="hard">Hard</button>
+      </div>
+    </header>
+
+    <main>
+      <section id="game-info">
+        <div id="game-rules">
+          <h2>Game Rules</h2>
+          <p>
+            I'm thinking of a number between <span id="min-range">1</span> and
+            <span id="max-range">100</span>.
+          </p>
+          <p>Try to guess the number in as few attempts as possible!</p>
+        </div>
+
+        <div id="game-timer">
+          <h3>Time</h3>
+          <p><span id="minutes">00</span>:<span id="seconds">00</span></p>
+        </div>
+      </section>
+
+      <section id="game-area">
+        <div id="guess-input">
+          <input
+            type="number"
+            id="user-guess"
+            min="1"
+            max="100"
+            placeholder="Enter your guess..."
+          />
+          <button id="submit-guess">Submit Guess</button>
+          <button id="hint-btn">Get Hint</button>
+        </div>
+
+        <div id="temperature-gauge">
+          <div class="temperature-label">Cold</div>
+          <div class="temperature-bar">
+            <div class="temperature-indicator"></div>
+          </div>
+          <div class="temperature-label">Hot</div>
+        </div>
+
+        <div id="game-message">
+          <p>Enter a number and click "Submit Guess"</p>
+        </div>
+
+        <div id="game-history">
+          <h3>Your Guesses</h3>
+          <ul id="guesses-list">
+            <!-- Guesses will appear here -->
+          </ul>
+        </div>
+      </section>
+
+      <section id="game-stats">
+        <div id="current-score">
+          <h3>Current Game</h3>
+          <p>Attempts: <span id="attempts">0</span></p>
+          <p>Hints Used: <span id="hints-used">0</span></p>
+        </div>
+
+        <div id="high-scores">
+          <h3>High Scores</h3>
+          <ol id="high-scores-list">
+            <!-- High scores will appear here -->
+          </ol>
+        </div>
+      </section>
+    </main>
+
+    <div id="win-modal" class="modal">
+      <div class="modal-content">
+        <h2>Congratulations!</h2>
+        <p>
+          You guessed the number <span id="winning-number"></span> in
+          <span id="winning-attempts"></span> attempts!
+        </p>
+        <p>Your time: <span id="winning-time"></span></p>
+        <p>Your score: <span id="final-score"></span></p>
+        <input
+          type="text"
+          id="player-name"
+          placeholder="Enter your name for high score"
+        />
+        <button id="save-score">Save Score</button>
+        <button id="play-again">Play Again</button>
+      </div>
+    </div>
+
+    <footer>
+      <p>
+        Created during the "Create Your First Website" Bootcamp - Advanced
+        Version
+      </p>
+    </footer>
+
+    <!-- Add JavaScript at the end for better performance -->
+    <script src="advanced-script.js"></script>
+  </body>
+</html>

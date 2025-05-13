@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript DOM Interaction</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f5f5f5;
+        margin: 0;
+        padding: 20px;
+      }
+      .diagram-container {
+        background-color: white;
+        border-radius: 8px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+      h1 {
+        color: #4a55a2;
+        text-align: center;
+      }
+      .interactive-demo {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 30px 0;
+        gap: 20px;
+      }
+      .demo-box {
+        width: 200px;
+        height: 200px;
+        background-color: #f7df1e;
+        border: 3px solid #333;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 24px;
+        font-weight: bold;
+        transition: all 0.3s ease;
+      }
+      .control-panel {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        justify-content: center;
+        max-width: 600px;
+      }
+      button {
+        padding: 10px 15px;
+        border: none;
+        border-radius: 4px;
+        background-color: #4a55a2;
+        color: white;
+        cursor: pointer;
+        font-size: 14px;
+        transition: background-color 0.3s ease;
+      }
+      button:hover {
+        background-color: #3a4482;
+      }
+      .code-example {
+        background-color: #f5f5f5;
+        padding: 15px;
+        border-radius: 4px;
+        margin: 20px 0;
+        overflow: auto;
+      }
+      pre {
+        margin: 0;
+        font-family: monospace;
+        font-size: 14px;
+      }
+      .explanation {
+        line-height: 1.6;
+        margin: 20px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="diagram-container">
+      <h1>JavaScript DOM Interaction</h1>
+
+      <div class="interactive-demo">
+        <div id="demo-box" class="demo-box">
+          <span id="demo-text">JavaScript</span>
+        </div>
+
+        <div class="control-panel">
+          <button onclick="changeColor()">Change Color</button>
+          <button onclick="changeSize()">Change Size</button>
+          <button onclick="changeText()">Change Text</button>
+          <button onclick="addBorderRadius()">Add Border Radius</button>
+          <button onclick="rotate()">Rotate</button>
+          <button onclick="reset()">Reset</button>
+        </div>
+      </div>
+
+      <div class="explanation">
+        <h2>How JavaScript Interacts with the DOM</h2>
+        <p>
+          JavaScript can modify HTML elements, CSS styles, respond to events,
+          and update content dynamically. The above demo shows these
+          capabilities in action:
+        </p>
+        <ul>
+          <li>
+            <strong>Selecting Elements</strong>: JavaScript can select and
+            target HTML elements using methods like getElementById,
+            querySelector, etc.
+          </li>
+          <li>
+            <strong>Changing Styles</strong>: Properties of elements can be
+            modified, such as color, size, and position.
+          </li>
+          <li>
+            <strong>Modifying Content</strong>: Text content and HTML structure
+            can be updated dynamically.
+          </li>
+          <li>
+            <strong>Responding to Events</strong>: JavaScript can execute code
+            in response to user actions like clicks.
+          </li>
+          <li>
+            <strong>Creating Animations</strong>: Elements can be animated by
+            changing CSS properties over time.
+          </li>
+        </ul>
+      </div>
+
+      <div class="code-example">
+        <h3>Example Code:</h3>
+        <pre>
+// Selecting an element
+const boxElement = document.getElementById('demo-box');
+const textElement = document.getElementById('demo-text');
+
+// Changing styles
+function changeColor() {
+  boxElement.style.backgroundColor = '#' + Math.floor(Math.random()*16777215).toString(16);
+}
+
+// Modifying content
+function changeText() {
+  const texts = ['JavaScript', 'DOM', 'Interactive', 'Dynamic', 'Awesome'];
+  const randomIndex = Math.floor(Math.random() * texts.length);
+  textElement.textContent = texts[randomIndex];
+}
+
+// Event handling
+boxElement.addEventListener('mouseover', function() {
+  this.style.boxShadow = '0 0 10px rgba(0,0,0,0.5)';
+});
+
+boxElement.addEventListener('mouseout', function() {
+  this.style.boxShadow = 'none';
+});
+            </pre
+        >
+      </div>
+    </div>
+
+    <script>
+      const boxElement = document.getElementById("demo-box");
+      const textElement = document.getElementById("demo-text");
+
+      function changeColor() {
+        boxElement.style.backgroundColor =
+          "#" + Math.floor(Math.random() * 16777215).toString(16);
+      }
+
+      function changeSize() {
+        if (boxElement.style.width === "300px") {
+          boxElement.style.width = "200px";
+          boxElement.style.height = "200px";
+        } else {
+          boxElement.style.width = "300px";
+          boxElement.style.height = "300px";
+        }
+      }
+
+      function changeText() {
+        const texts = [
+          "JavaScript",
+          "DOM",
+          "Interactive",
+          "Dynamic",
+          "Awesome",
+        ];
+        const currentText = textElement.textContent;
+        let newText;
+
+        do {
+          const randomIndex = Math.floor(Math.random() * texts.length);
+          newText = texts[randomIndex];
+        } while (newText === currentText);
+
+        textElement.textContent = newText;
+      }
+
+      function addBorderRadius() {
+        if (boxElement.style.borderRadius === "50%") {
+          boxElement.style.borderRadius = "0";
+        } else {
+          boxElement.style.borderRadius = "50%";
+        }
+      }
+
+      function rotate() {
+        const currentTransform = boxElement.style.transform || "";
+
+        if (currentTransform.includes("rotate(360deg)")) {
+          boxElement.style.transform = "rotate(0deg)";
+        } else {
+          boxElement.style.transform = "rotate(360deg)";
+        }
+      }
+
+      function reset() {
+        boxElement.style.backgroundColor = "#f7df1e";
+        boxElement.style.width = "200px";
+        boxElement.style.height = "200px";
+        boxElement.style.borderRadius = "0";
+        boxElement.style.transform = "rotate(0deg)";
+        textElement.textContent = "JavaScript";
+      }
+
+      // Add hover effect
+      boxElement.addEventListener("mouseover", function () {
+        this.style.boxShadow = "0 0 10px rgba(0,0,0,0.5)";
+      });
+
+      boxElement.addEventListener("mouseout", function () {
+        this.style.boxShadow = "none";
+      });
+    </script>
+  </body>
+</html>

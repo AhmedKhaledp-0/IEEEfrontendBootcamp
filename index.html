@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Create Your First Website: 3-Day Front-End Development Bootcamp
+    </title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family: "Arial", sans-serif;
+      }
+
+      body {
+        background-color: #f9f9f9;
+        color: #333;
+        line-height: 1.6;
+        padding: 20px;
+      }
+
+      header,
+      main,
+      footer {
+        max-width: 1000px;
+        margin: 0 auto;
+      }
+
+      header {
+        text-align: center;
+        margin-bottom: 40px;
+        padding: 30px;
+        background-color: #4a55a2;
+        color: white;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+
+      h1 {
+        font-size: 2.5rem;
+        margin-bottom: 15px;
+      }
+
+      .tagline {
+        font-size: 1.2rem;
+        font-style: italic;
+      }
+
+      .days-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: space-between;
+        margin-bottom: 40px;
+      }
+
+      .day-card {
+        flex: 1;
+        min-width: 300px;
+        background-color: white;
+        border-radius: 8px;
+        padding: 20px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+      }
+
+      .day-card:hover {
+        transform: translateY(-5px);
+      }
+
+      .day-card h2 {
+        color: #4a55a2;
+        margin-bottom: 15px;
+        padding-bottom: 10px;
+        border-bottom: 2px solid #f0f0f0;
+      }
+
+      .day-card ul {
+        padding-left: 20px;
+        margin-bottom: 20px;
+      }
+
+      .day-card li {
+        margin-bottom: 8px;
+      }
+
+      .cta-button {
+        display: inline-block;
+        background-color: #4a55a2;
+        color: white;
+        text-decoration: none;
+        padding: 10px 20px;
+        border-radius: 4px;
+        font-weight: bold;
+        transition: background-color 0.3s;
+      }
+
+      .cta-button:hover {
+        background-color: #363e7a;
+      }
+
+      .demo-section {
+        background-color: #e8f4fd;
+        padding: 30px;
+        border-radius: 8px;
+        margin-bottom: 40px;
+        text-align: center;
+      }
+
+      .demo-section h2 {
+        margin-bottom: 20px;
+      }
+
+      .demo-links {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        flex-wrap: wrap;
+      }
+
+      .summary-section {
+        background-color: white;
+        padding: 30px;
+        border-radius: 8px;
+        margin-bottom: 40px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      .summary-section h2 {
+        color: #4a55a2;
+        margin-bottom: 20px;
+      }
+
+      footer {
+        text-align: center;
+        margin-top: 30px;
+        padding: 20px;
+        color: #777;
+        border-top: 1px solid #ddd;
+      }
+
+      @media (max-width: 768px) {
+        .days-container {
+          flex-direction: column;
+        }
+
+        h1 {
+          font-size: 2rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Create Your First Website</h1>
+      <p class="tagline">
+        A 3-Day Front-End Development Bootcamp for Beginners
+      </p>
+    </header>
+
+    <main>
+      <section class="days-container">
+        <article class="day-card">
+          <h2>Day 1: HTML Basics</h2>
+          <ul>
+            <li>Introduction to web development</li>
+            <li>HTML structure and elements</li>
+            <li>Essential tags and attributes</li>
+            <li>Building the game interface layout</li>
+          </ul>
+          <a href="day1/README.md" class="cta-button">View Day 1 Content</a>
+        </article>
+
+        <article class="day-card">
+          <h2>Day 2: CSS Styling</h2>
+          <ul>
+            <li>CSS syntax and selectors</li>
+            <li>Styling text, colors, and layouts</li>
+            <li>The Box Model and Flexbox</li>
+            <li>Responsive design and effects</li>
+          </ul>
+          <a href="day2/README.md" class="cta-button">View Day 2 Content</a>
+        </article>
+
+        <article class="day-card">
+          <h2>Day 3: JavaScript Logic</h2>
+          <ul>
+            <li>JavaScript fundamentals</li>
+            <li>DOM manipulation</li>
+            <li>Event handling</li>
+            <li>Building a complete game</li>
+          </ul>
+          <a href="day3/README.md" class="cta-button">View Day 3 Content</a>
+        </article>
+      </section>
+
+      <section class="demo-section">
+        <h2>Try the Completed Game</h2>
+        <p>See what you'll build by the end of the bootcamp:</p>
+        <div class="demo-links">
+          <a href="day3/guess-the-number.html" class="cta-button"
+            >Basic Version</a
+          >
+          <a href="day3/advanced-guess-the-number.html" class="cta-button"
+            >Advanced Version</a
+          >
+        </div>
+      </section>
+
+      <section class="demo-section" style="margin-top: 30px">
+        <h2>Interactive Visual Guides</h2>
+        <p>
+          Visualize key web development concepts with these interactive
+          examples:
+        </p>
+        <div class="demo-links">
+          <a
+            href="assets/images/html-structure.html"
+            class="cta-button"
+            style="background-color: #e34c26"
+            >HTML Structure</a
+          >
+          <a
+            href="assets/images/css-box-model.html"
+            class="cta-button"
+            style="background-color: #264de4"
+            >CSS Box Model</a
+          >
+          <a
+            href="assets/images/js-dom-interaction.html"
+            class="cta-button"
+            style="background-color: #f7df1e; color: #333"
+            >JS DOM Interaction</a
+          >
+        </div>
+      </section>
+
+      <section
+        class="resources-section"
+        style="
+          background-color: #e8f4fd;
+          padding: 30px;
+          border-radius: 8px;
+          margin-bottom: 40px;
+          text-align: center;
+        "
+      >
+        <h2 style="margin-bottom: 20px; color: #4a55a2">
+          Resources & References
+        </h2>
+        <p>Everything you need to succeed in the bootcamp:</p>
+        <div style="margin-bottom: 20px">
+          <h3 style="margin-bottom: 10px">Quick Reference Cheatsheets</h3>
+          <div class="demo-links">
+            <a
+              href="assets/html-cheatsheet.md"
+              class="cta-button"
+              style="background-color: #e34c26"
+              >HTML Cheatsheet</a
+            >
+            <a
+              href="assets/css-cheatsheet.md"
+              class="cta-button"
+              style="background-color: #264de4"
+              >CSS Cheatsheet</a
+            >
+            <a
+              href="assets/javascript-cheatsheet.md"
+              class="cta-button"
+              style="background-color: #f7df1e; color: #333"
+              >JavaScript Cheatsheet</a
+            >
+          </div>
+        </div>
+        <div>
+          <h3 style="margin-bottom: 10px">Helpful Guides</h3>
+          <div class="demo-links">
+            <a
+              href="assets/faq.md"
+              class="cta-button"
+              style="background-color: #5cb85c"
+              >FAQ</a
+            >
+            <a
+              href="assets/glossary.md"
+              class="cta-button"
+              style="background-color: #5bc0de"
+              >Glossary</a
+            >
+            <a
+              href="assets/troubleshooting.md"
+              class="cta-button"
+              style="background-color: #d9534f"
+              >Troubleshooting</a
+            >
+            <a
+              href="assets/extension-ideas.md"
+              class="cta-button"
+              style="background-color: #f0ad4e"
+              >Game Extensions</a
+            >
+            <a
+              href="assets/debugging-guide.md"
+              class="cta-button"
+              style="background-color: #e83e8c"
+              >Debugging Guide</a
+            >
+          </div>
+        </div>
+        <div style="margin-top: 20px">
+          <h3 style="margin-bottom: 10px">Advanced Learning</h3>
+          <div class="demo-links">
+            <a
+              href="assets/reading-list.md"
+              class="cta-button"
+              style="background-color: #6f42c1"
+              >Reading List</a
+            >
+            <a
+              href="assets/learning-pathway.md"
+              class="cta-button"
+              style="background-color: #20c997"
+              >Learning Pathway</a
+            >
+            <a
+              href="assets/responsive-design-guide.md"
+              class="cta-button"
+              style="background-color: #17a2b8"
+              >Responsive Design</a
+            >
+            <a
+              href="assets/performance-guide.md"
+              class="cta-button"
+              style="background-color: #fd7e14"
+              >Performance Guide</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <section class="summary-section">
+        <h2>Bootcamp Summary</h2>
+        <p>
+          This 3-day bootcamp is designed to take you from zero to creating your
+          first interactive web game. You'll learn the three core technologies
+          of front-end web development:
+        </p>
+        <ul>
+          <li><strong>HTML</strong> for structure and content</li>
+          <li><strong>CSS</strong> for styling and layout</li>
+          <li><strong>JavaScript</strong> for interactivity and logic</li>
+        </ul>
+        <p>
+          By the end, you'll have built a fully functional "Guess the Number"
+          game that demonstrates these technologies working together.
+        </p>
+        <div style="text-align: center; margin-top: 20px">
+          <a href="summary.md" class="cta-button">View Complete Summary</a>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 Front-End Development Bootcamp</p>
+    </footer>
+  </body>
+</html>
