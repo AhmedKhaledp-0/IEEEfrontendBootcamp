@@ -318,7 +318,7 @@ Ready to practice what you've learned? Try our HTML mini-challenges to reinforce
 
 These challenges will help you apply your HTML knowledge in different contexts and build confidence with the concepts we've covered.
 
-[View Today's Mini-Challenges](challenges.md)
+[View Today's Mini-Challenges](../day1/challenges.md)
 
 ## Next Steps
 

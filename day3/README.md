@@ -545,7 +545,7 @@ Ready to cement your JavaScript skills? Try our JavaScript mini-challenges to re
 
 These challenges provide opportunities to practice JavaScript in different contexts and build confidence with the programming techniques we've covered.
 
-[View Today's Mini-Challenges](challenges.md)
+[View Today's Mini-Challenges](../day3/challenges.md)
 
 ## Extending Your Game
 

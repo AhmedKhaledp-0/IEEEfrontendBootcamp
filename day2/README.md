@@ -502,7 +502,7 @@ Ready to practice what you've learned? Try our CSS mini-challenges to reinforce 
 
 These challenges will help you apply your CSS knowledge in different contexts and build confidence with the styling techniques we've covered.
 
-[View Today's Mini-Challenges](challenges.md)
+[View Today's Mini-Challenges](../day2/challenges.md)
 
 ## Coming Up Tomorrow
 
