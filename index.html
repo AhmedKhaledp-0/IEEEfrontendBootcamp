@@ -15,11 +15,12 @@
     <link rel="stylesheet" href="md-to-html.css" />
     <script src="md-to-html.js" defer></script>
     <style>
+      @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
       * {
         box-sizing: border-box;
         margin: 0;
         padding: 0;
-        font-family: "Arial", sans-serif;
+        font-family: "Roboto", sans-serif;
       }
 
       body {
@@ -32,7 +33,7 @@
       header,
       main,
       footer {
-        max-width: 1000px;
+        max-width: 100vw;
         margin: 0 auto;
       }
 
@@ -102,11 +103,12 @@
         padding: 10px 20px;
         border-radius: 4px;
         font-weight: bold;
-        transition: background-color 0.3s;
+        transition: all 0.3s;
       }
 
       .cta-button:hover {
         background-color: #363e7a;
+        scale: 1.02;
       }
 
       .demo-section {
@@ -122,10 +124,12 @@
       }
 
       .demo-links {
-        display: flex;
-        justify-content: center;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
         gap: 20px;
-        flex-wrap: wrap;
+        width: 100%;
+        max-width: 800px;
+        margin: 0 auto;
       }
 
       .summary-section {
@@ -153,7 +157,10 @@
         .days-container {
           flex-direction: column;
         }
-
+        .cta-button {
+          width: 100%;
+          text-align: center;
+        }
         h1 {
           font-size: 2rem;
         }
